@@ -1,0 +1,12 @@
+name: study-coach
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+    - python-dotenv>=1.0.0
+    - openai>=1.0.0
+    - httpx>=0.25.0
+    - pytest>=7.4.0
