@@ -52,10 +52,10 @@ class ModelClient:
 
         if self.provider == "ollama":
             client = self._create_ollama_client()
-            model = model or os.getenv("OLLAMA_MODEL", "qwen2.5")
+            model = model or os.getenv("OLLAMA_MODEL", "qwen3.5:35b-a3b")
         else:
             client = self._create_openai_client()
-            model = model or os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+            model = model or os.getenv("OPENAI_MODEL", "qwen3.5:35b-a3b")
 
         response = client.chat.completions.create(
             model=model,

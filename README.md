@@ -125,12 +125,12 @@ PROVIDER=ollama
 
 # Ollama 配置
 OLLAMA_BASE_URL=http://localhost:11434
-OLLAMA_MODEL=qwen2.5
+OLLAMA_MODEL=qwen3.5:35b-a3b
 
 # OpenAI 配置 (二选一)
 OPENAI_BASE_URL=https://api.openai.com/v1
 OPENAI_API_KEY=your-api-key
-OPENAI_MODEL=gpt-4o-mini
+OPENAI_MODEL=qwen3.5:35b-a3b
 
 # 词元预算控制
 MAX_TOKENS_PER_REQUEST=2048
