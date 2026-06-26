@@ -41,11 +41,13 @@ copy .env.example .env
 # 构建镜像
 docker build -t study-coach .
 
-# 运行容器
-docker run --rm -it study-coach python main.py --chat
+# 运行容器 (传递环境变量并连接到 Ollama 网络)
+docker run --rm -it --env-file .env --network host study-coach python main.py --chat
 ```
 
 ## 使用方法
+
+> **Windows 用户注意**: 如果 `python` 命令指向 Windows Store 启动器，需要使用完整路径，例如：`"C:\Users\DELL\AppData\Local\Programs\Python\Python314\python.exe"`
 
 ### 检查模型连通性
 
