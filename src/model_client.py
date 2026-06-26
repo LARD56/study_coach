@@ -23,6 +23,8 @@ class ModelClient:
     def _create_ollama_client(self) -> OpenAI:
         """创建 Ollama 客户端"""
         base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+        if not base_url.endswith("/v1"):
+            base_url = base_url.rstrip("/") + "/v1"
         return OpenAI(base_url=base_url, api_key="ollama")
 
     def _create_openai_client(self) -> OpenAI:
